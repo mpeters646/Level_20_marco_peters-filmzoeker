@@ -107,568 +107,450 @@ Focus je eerst op de functionaliteiten en JavaScript, voordat je gaat beginnen m
 ## Database
 
 ```javascript
-onst movies = [
+const movies = [
+  {
+    Title: 'X-Men: Days of Future Past',
 
-{
+    Year: '2014',
 
-Title: "X-Men: Days of Future Past",
+    imdbID: 'tt1877832',
 
-Year: "2014",
+    Type: 'movie',
 
-imdbID: "tt1877832",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+  },
 
-Type: "movie",
+  {
+    Title: 'X-Men: First Class',
 
-Poster:
+    Year: '2011',
 
-"https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    imdbID: 'tt1270798',
 
-},
+    Type: 'movie',
 
-{
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg',
+  },
 
-Title: "X-Men: First Class",
+  {
+    Title: 'X-Men',
 
-Year: "2011",
+    Year: '2000',
 
-imdbID: "tt1270798",
+    imdbID: 'tt0120903',
 
-Type: "movie",
+    Type: 'movie',
 
-Poster:
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+  },
 
-"https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg"
+  {
+    Title: 'X2: X-Men United',
 
-},
+    Year: '2003',
 
-{
+    imdbID: 'tt0290334',
 
-Title: "X-Men",
+    Type: 'movie',
 
-Year: "2000",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_SX300.jpg',
+  },
 
-imdbID: "tt0120903",
+  {
+    Title: 'X-Men: The Last Stand',
 
-Type: "movie",
+    Year: '2006',
 
-Poster:
+    imdbID: 'tt0376994',
 
-"https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    Type: 'movie',
 
-},
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDBhNDJiMWEtOTg4Yi00NTYzLWEzOGMtMjNmNjAxNTBlMzY3XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg',
+  },
 
-{
+  {
+    Title: 'X-Men Origins: Wolverine',
 
-Title: "X2: X-Men United",
+    Year: '2009',
 
-Year: "2003",
+    imdbID: 'tt0458525',
 
-imdbID: "tt0290334",
+    Type: 'movie',
 
-Type: "movie",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZWRhMzdhMzEtZTViNy00YWYyLTgxZmUtMTMwMWM0NTEyMjk3XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg',
+  },
 
-Poster:
+  {
+    Title: 'X-Men: Apocalypse',
 
-"https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_SX300.jpg"
+    Year: '2016',
 
-},
+    imdbID: 'tt3385516',
 
-{
+    Type: 'movie',
 
-Title: "X-Men: The Last Stand",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_SX300.jpg',
+  },
 
-Year: "2006",
+  {
+    Title: 'X-Men: The Animated Series',
 
-imdbID: "tt0376994",
+    Year: '1992–1997',
 
-Type: "movie",
+    imdbID: 'tt0103584',
 
-Poster:
+    Type: 'series',
 
-"https://m.media-amazon.com/images/M/MV5BNDBhNDJiMWEtOTg4Yi00NTYzLWEzOGMtMjNmNjAxNTBlMzY3XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNTVjNmEwNTMtNmQ2ZC00MGJkLWI3MDgtNzMyNTc4YjVkNTQ1L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+  },
 
-},
+  {
+    Title: 'X-Men: Evolution',
 
-{
+    Year: '2000–2003',
 
-Title: "X-Men Origins: Wolverine",
+    imdbID: 'tt0247827',
 
-Year: "2009",
+    Type: 'series',
 
-imdbID: "tt0458525",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOWMyMThhN2UtMGMzYi00ODVmLWFlODItYmZlMzMxYzE3MmZkXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg',
+  },
 
-Type: "movie",
+  {
+    Title: 'Wolverine and the X-Men',
 
-Poster:
+    Year: '2008–2009',
 
-"https://m.media-amazon.com/images/M/MV5BZWRhMzdhMzEtZTViNy00YWYyLTgxZmUtMTMwMWM0NTEyMjk3XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+    imdbID: 'tt0772145',
 
-},
+    Type: 'series',
 
-{
+    Poster: 'https://m.media-amazon.com/images/M/MV5BNzk4Nzg3NjMyMV5BMl5BanBnXkFtZTcwMjk3MjU0Mg@@._V1_SX300.jpg',
+  },
 
-Title: "X-Men: Apocalypse",
+  {
+    Title: 'The Avengers',
 
-Year: "2016",
+    Year: '2012',
 
-imdbID: "tt3385516",
+    imdbID: 'tt0848228',
 
-Type: "movie",
+    Type: 'movie',
 
-Poster:
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+  },
 
-"https://m.media-amazon.com/images/M/MV5BMjU1ODM1MzYxN15BMl5BanBnXkFtZTgwOTA4NDE2ODE@._V1_SX300.jpg"
+  {
+    Title: 'Avengers: Infinity War',
 
-},
+    Year: '2018',
 
-{
+    imdbID: 'tt4154756',
 
-Title: "X-Men: The Animated Series",
+    Type: 'movie',
 
-Year: "1992–1997",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
+  },
 
-imdbID: "tt0103584",
+  {
+    Title: 'Avengers: Age of Ultron',
 
-Type: "series",
+    Year: '2015',
 
-Poster:
+    imdbID: 'tt2395427',
 
-"https://m.media-amazon.com/images/M/MV5BNTVjNmEwNTMtNmQ2ZC00MGJkLWI3MDgtNzMyNTc4YjVkNTQ1L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    Type: 'movie',
 
-},
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
+  },
 
-{
+  {
+    Title: 'Avengers: Endgame',
 
-Title: "X-Men: Evolution",
+    Year: '2019',
 
-Year: "2000–2003",
+    imdbID: 'tt4154796',
 
-imdbID: "tt0247827",
+    Type: 'movie',
 
-Type: "series",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
+  },
 
-Poster:
+  {
+    Title: 'The Avengers',
 
-"https://m.media-amazon.com/images/M/MV5BOWMyMThhN2UtMGMzYi00ODVmLWFlODItYmZlMzMxYzE3MmZkXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
+    Year: '1998',
 
-},
+    imdbID: 'tt0118661',
 
-{
+    Type: 'movie',
 
-Title: "Wolverine and the X-Men",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BYWE1NTdjOWQtYTQ2Ny00Nzc5LWExYzMtNmRlOThmOTE2N2I4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg',
+  },
 
-Year: "2008–2009",
+  {
+    Title: "The Avengers: Earth's Mightiest Heroes",
 
-imdbID: "tt0772145",
+    Year: '2010–2012',
 
-Type: "series",
+    imdbID: 'tt1626038',
 
-Poster:
+    Type: 'series',
 
-"https://m.media-amazon.com/images/M/MV5BNzk4Nzg3NjMyMV5BMl5BanBnXkFtZTcwMjk3MjU0Mg@@._V1_SX300.jpg"
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BYzA4ZjVhYzctZmI0NC00ZmIxLWFmYTgtOGIxMDYxODhmMGQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg',
+  },
 
-},
+  {
+    Title: 'Ultimate Avengers',
 
-{
+    Year: '2006',
 
-Title: "The Avengers",
+    imdbID: 'tt0491703',
 
-Year: "2012",
+    Type: 'movie',
 
-imdbID: "tt0848228",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDFmZTkxMjktMzRiYS00YzMwLWFhZDctOTQ2N2NlOTAyZDJhXkEyXkFqcGdeQXVyNjgzNDU2ODI@._V1_SX300.jpg',
+  },
 
-Type: "movie",
+  {
+    Title: 'Ultimate Avengers II',
 
-Poster:
+    Year: '2006',
 
-"https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    imdbID: 'tt0803093',
 
-},
+    Type: 'movie',
 
-{
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZjI3MTI5ZTYtZmNmNy00OGZmLTlhNWMtNjZiYmYzNDhlOGRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+  },
 
-Title: "Avengers: Infinity War",
+  {
+    Title: 'The Avengers',
 
-Year: "2018",
+    Year: '1961–1969',
 
-imdbID: "tt4154756",
+    imdbID: 'tt0054518',
 
-Type: "movie",
+    Type: 'series',
 
-Poster:
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZWI4ZWM4ZWQtODk1ZC00MzMxLThlZmMtOGFmMTYxZTAwYjc5XkEyXkFqcGdeQXVyMTk0MjQ3Nzk@._V1_SX300.jpg',
+  },
 
-"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
+  {
+    Title: 'Batman Begins',
 
-},
+    Year: '2005',
 
-{
+    imdbID: 'tt0372784',
 
-Title: "Avengers: Age of Ultron",
+    Type: 'movie',
 
-Year: "2015",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg',
+  },
 
-imdbID: "tt2395427",
+  {
+    Title: 'Batman v Superman: Dawn of Justice',
 
-Type: "movie",
+    Year: '2016',
 
-Poster:
+    imdbID: 'tt2975590',
 
-"https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg"
+    Type: 'movie',
 
-},
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+  },
 
-{
+  {
+    Title: 'Batman',
 
-Title: "Avengers: Endgame",
+    Year: '1989',
 
-Year: "2019",
+    imdbID: 'tt0096895',
 
-imdbID: "tt4154796",
+    Type: 'movie',
 
-Type: "movie",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg',
+  },
 
-Poster:
+  {
+    Title: 'Batman Returns',
 
-"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
+    Year: '1992',
 
-},
+    imdbID: 'tt0103776',
 
-{
+    Type: 'movie',
 
-Title: "The Avengers",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg',
+  },
 
-Year: "1998",
+  {
+    Title: 'Batman Forever',
 
-imdbID: "tt0118661",
+    Year: '1995',
 
-Type: "movie",
+    imdbID: 'tt0112462',
 
-Poster:
+    Type: 'movie',
 
-"https://m.media-amazon.com/images/M/MV5BYWE1NTdjOWQtYTQ2Ny00Nzc5LWExYzMtNmRlOThmOTE2N2I4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+  },
 
-},
+  {
+    Title: 'Batman & Robin',
 
-{
+    Year: '1997',
 
-Title: "The Avengers: Earth's Mightiest Heroes",
+    imdbID: 'tt0118688',
 
-Year: "2010–2012",
+    Type: 'movie',
 
-imdbID: "tt1626038",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg',
+  },
 
-Type: "series",
+  {
+    Title: 'The Lego Batman Movie',
 
-Poster:
+    Year: '2017',
 
-"https://m.media-amazon.com/images/M/MV5BYzA4ZjVhYzctZmI0NC00ZmIxLWFmYTgtOGIxMDYxODhmMGQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+    imdbID: 'tt4116284',
 
-},
+    Type: 'movie',
 
-{
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg',
+  },
 
-Title: "Ultimate Avengers",
+  {
+    Title: 'Batman: The Animated Series',
 
-Year: "2006",
+    Year: '1992–1995',
 
-imdbID: "tt0491703",
+    imdbID: 'tt0103359',
 
-Type: "movie",
+    Type: 'series',
 
-Poster:
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg',
+  },
 
-"https://m.media-amazon.com/images/M/MV5BNDFmZTkxMjktMzRiYS00YzMwLWFhZDctOTQ2N2NlOTAyZDJhXkEyXkFqcGdeQXVyNjgzNDU2ODI@._V1_SX300.jpg"
+  {
+    Title: 'Batman: Under the Red Hood',
 
-},
+    Year: '2010',
 
-{
+    imdbID: 'tt1569923',
 
-Title: "Ultimate Avengers II",
+    Type: 'movie',
 
-Year: "2006",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNmY4ZDZjY2UtOWFiYy00MjhjLThmMjctOTQ2NjYxZGRjYmNlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+  },
 
-imdbID: "tt0803093",
+  {
+    Title: 'Batman: The Dark Knight Returns, Part 1',
 
-Type: "movie",
+    Year: '2012',
 
-Poster:
+    imdbID: 'tt2313197',
 
-"https://m.media-amazon.com/images/M/MV5BZjI3MTI5ZTYtZmNmNy00OGZmLTlhNWMtNjZiYmYzNDhlOGRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    Type: 'movie',
 
-},
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg',
+  },
 
-{
+  {
+    Title: 'The Princess Bride',
 
-Title: "The Avengers",
+    Year: '1987',
 
-Year: "1961–1969",
+    imdbID: 'tt0093779',
 
-imdbID: "tt0054518",
+    Type: 'movie',
 
-Type: "series",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMGM4M2Q5N2MtNThkZS00NTc1LTk1NTItNWEyZjJjNDRmNDk5XkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_SX300.jpg',
+  },
 
-Poster:
+  {
+    Title: 'Princess Mononoke',
 
-"https://m.media-amazon.com/images/M/MV5BZWI4ZWM4ZWQtODk1ZC00MzMxLThlZmMtOGFmMTYxZTAwYjc5XkEyXkFqcGdeQXVyMTk0MjQ3Nzk@._V1_SX300.jpg"
+    Year: '1997',
 
-},
+    imdbID: 'tt0119698',
 
-{
+    Type: 'movie',
 
-Title: "Batman Begins",
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTVlNWM4NTAtNDQxYi00YWU5LWIwM2MtZmVjYWFmODZiODE5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+  },
 
-Year: "2005",
+  {
+    Title: 'The Princess Diaries',
 
-imdbID: "tt0372784",
+    Year: '2001',
 
-Type: "movie",
+    imdbID: 'tt0247638',
 
-Poster:
+    Type: 'movie',
 
-"https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMzcwYjEwMzEtZTZmMi00ZGFhLWJhZjItMDAzNDVkNjZmM2U5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+  },
 
-},
+  {
+    Title: 'The Princess and the Frog',
 
-{
+    Year: '2009',
 
-Title: "Batman v Superman: Dawn of Justice",
+    imdbID: 'tt0780521',
 
-Year: "2016",
+    Type: 'movie',
 
-imdbID: "tt2975590",
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMjEyOTQ5NzAzNl5BMl5BanBnXkFtZTcwMTcyNTU1Mg@@._V1_SX300.jpg',
+  },
 
-Type: "movie",
+  {
+    Title: 'The Princess Diaries 2: Royal Engagement',
 
-Poster:
+    Year: '2004',
 
-"https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    imdbID: 'tt0368933',
 
-},
+    Type: 'movie',
 
-{
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BODljNTU2ZGMtMWI5Yy00MGNkLTg2MTktN2NhZjY0NDcwMDhiL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+  },
 
-Title: "Batman",
+  {
+    Title: 'Xena: Warrior Princess',
 
-Year: "1989",
+    Year: '1995–2001',
 
-imdbID: "tt0096895",
+    imdbID: 'tt0112230',
 
-Type: "movie",
+    Type: 'series',
 
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman Returns",
-
-Year: "1992",
-
-imdbID: "tt0103776",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman Forever",
-
-Year: "1995",
-
-imdbID: "tt0112462",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman & Robin",
-
-Year: "1997",
-
-imdbID: "tt0118688",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "The Lego Batman Movie",
-
-Year: "2017",
-
-imdbID: "tt4116284",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman: The Animated Series",
-
-Year: "1992–1995",
-
-imdbID: "tt0103359",
-
-Type: "series",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman: Under the Red Hood",
-
-Year: "2010",
-
-imdbID: "tt1569923",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BNmY4ZDZjY2UtOWFiYy00MjhjLThmMjctOTQ2NjYxZGRjYmNlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Batman: The Dark Knight Returns, Part 1",
-
-Year: "2012",
-
-imdbID: "tt2313197",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "The Princess Bride",
-
-Year: "1987",
-
-imdbID: "tt0093779",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMGM4M2Q5N2MtNThkZS00NTc1LTk1NTItNWEyZjJjNDRmNDk5XkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Princess Mononoke",
-
-Year: "1997",
-
-imdbID: "tt0119698",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMTVlNWM4NTAtNDQxYi00YWU5LWIwM2MtZmVjYWFmODZiODE5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "The Princess Diaries",
-
-Year: "2001",
-
-imdbID: "tt0247638",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMzcwYjEwMzEtZTZmMi00ZGFhLWJhZjItMDAzNDVkNjZmM2U5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "The Princess and the Frog",
-
-Year: "2009",
-
-imdbID: "tt0780521",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BMjEyOTQ5NzAzNl5BMl5BanBnXkFtZTcwMTcyNTU1Mg@@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "The Princess Diaries 2: Royal Engagement",
-
-Year: "2004",
-
-imdbID: "tt0368933",
-
-Type: "movie",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BODljNTU2ZGMtMWI5Yy00MGNkLTg2MTktN2NhZjY0NDcwMDhiL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-
-},
-
-{
-
-Title: "Xena: Warrior Princess",
-
-Year: "1995–2001",
-
-imdbID: "tt0112230",
-
-Type: "series",
-
-Poster:
-
-"https://m.media-amazon.com/images/M/MV5BOTdkYjA4YzAtMjNiZS00OTgyLTg5Y2ItNGIwZGQyMTUzNzFiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-
-}
-
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOTdkYjA4YzAtMjNiZS00OTgyLTg5Y2ItNGIwZGQyMTUzNzFiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+  },
 ];
-
 ```
