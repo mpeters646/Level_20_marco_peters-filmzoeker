@@ -38,7 +38,7 @@ Aan deze eisen moet jouw project voldoen:
 
 9. Als gebruiker kan ik op de poster van de film klikken, waardoor ik naar de juiste IMDB pagina wordt gebracht.
 
-   - IMDB werkt met een `id` per film/serie in de URL. Deze ids vind je ook weer terug in onze filmdatabase. Zie bijvoorbeeld: https://www.imdb.com/title/tt0944947/ Pas de URL van IMDB aan en plak het juiste ID erachter.
+   - IMDB werkt met een `id` per film/serie in de URL. Deze ids vind je ook weer terug in onze filmdatabase. Zie bijvoorbeeld: <https://www.imdb.com/title/tt0944947/> Pas de URL van IMDB aan en plak het juiste ID erachter.
 
 ## Design
 

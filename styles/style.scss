@@ -40,6 +40,19 @@ main {
   height: 100vh;
 }
 
+.movie-container {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
 footer {
   height: 75px;
   color: #fff;
