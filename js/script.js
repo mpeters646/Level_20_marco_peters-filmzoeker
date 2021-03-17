@@ -9,3 +9,4 @@ const addMoviesToDom = () => {
 };
 
 addMoviesToDom();
+// 5. Oke, dan nu echt, we gaan iets doen op het moment dat er geklikt wordt op een van de radiobuttons.
