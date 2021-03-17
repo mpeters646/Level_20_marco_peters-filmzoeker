@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eindopdracht Filmzoeker</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/movies.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Winc Filmzoeker</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav>
+      <label for="nieuwste-films"><input type="radio" name="film-zoeker" id="nieuwste-films"
+          value="nieuwste-films">nieuwste films</label>
+      <label for="avengers"><input type="radio" name="film-zoeker" id="avengers" value="avengers">Avengers</label>
+      <label for="x-men"><input type="radio" name="film-zoeker" id="x-men" value="x-men">X-Men</label>
+      <label for="princess"><input type="radio" name="film-zoeker" id="princess" value="princess">Princess</label>
+      <label for="bathman"><input type="radio" name="film-zoeker" id="bathman" value="bathman">Bathman</label>
+    </nav>
+
+    <div class="main">
+      <div class="movie-container">
+        <ul id="movieList">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Eindopdracht Filmzoeker voor <a href="https://www.wincacademy.nl/opleidingen/full-stack-development"
+          target="_blanc">Winc Academy</a> Full-Stack
+        | Marco Peters &copy; 2021</p>
+    </div>
+  </footer>
+</body>
+
+</html>
