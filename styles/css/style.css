@@ -8,29 +8,64 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 .container {
-  max-width: 1680px;
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
   height: 150px;
-  color: #fff;
-  background-color: #000;
   display: flex;
   align-items: center;
   font-size: 2.5rem;
 }
+header h1 {
+  background: linear-gradient(to top right, #fff, #d4e7fa, #4f8bc9);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav .nav-container {
   display: flex;
   justify-content: space-between;
 }
-nav input {
+nav .nav-container input {
   margin: 0 10px 20px 10px;
+}
+nav .nav-container input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #fff;
+}
+nav .nav-container input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #4f8bc9;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #d4e7fa;
 }
 
 main {
@@ -50,8 +85,6 @@ main {
 
 footer {
   height: 75px;
-  color: #fff;
-  background-color: #000;
   display: flex;
   align-items: center;
 }

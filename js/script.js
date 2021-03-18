@@ -1,3 +1,4 @@
+/* Shows the filmposters to the DOM */
 const movieList = document.getElementById('movieList');
 
 const addMoviesToDom = () => {
@@ -9,4 +10,20 @@ const addMoviesToDom = () => {
 };
 
 addMoviesToDom();
-// 5. Oke, dan nu echt, we gaan iets doen op het moment dat er geklikt wordt op een van de radiobuttons.
+
+/* Radio buttons filter by select */
+const addEventListeners = () => {
+  console.log('Nothing to do jet!!!!');
+};
+
+const radioButtons = document.getElementsByName('film-filter');
+
+const radioButtonIsChecked = () => {
+  radioButtons.forEach((radioButton) => {
+    console.log(`Radio button ${radioButton.value} checked is ${radioButton.checked}!`);
+  });
+};
+
+radioButtonIsChecked();
+addEventListeners();
+console.log(radioButtons);
