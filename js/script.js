@@ -4,7 +4,7 @@ const movieList = document.getElementById('movieList');
 const addMoviesToDom = () => {
   movieList.innerHTML = movies
     .map((movie) => {
-      return `<li><img src="${movie.Poster}"></li>`;
+      return `<li><a href="https://www.imdb.com/title/${movie.imdbID}" target="_blank"><img src="${movie.Poster}"></a></li>`;
     })
     .join('');
 };
