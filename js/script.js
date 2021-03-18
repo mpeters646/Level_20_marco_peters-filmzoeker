@@ -12,18 +12,9 @@ const addMoviesToDom = () => {
 addMoviesToDom();
 
 /* Radio buttons filter by select */
-const addEventListeners = () => {
-  console.log('Nothing to do jet!!!!');
-};
+const selectedRadioButton = document.querySelector('input[name="film-filter"]').value;
+const selectedMovies = selectedRadioButton.addEventListeners('change', () => {
+  console.log(selectedRadioButton);
+});
 
-const radioButtons = document.getElementsByName('film-filter');
-
-const radioButtonIsChecked = () => {
-  radioButtons.forEach((radioButton) => {
-    console.log(`Radio button ${radioButton.value} checked is ${radioButton.checked}!`);
-  });
-};
-
-radioButtonIsChecked();
-addEventListeners();
-console.log(radioButtons);
+console.log(selectedMovies);
