@@ -12,15 +12,20 @@ const addMoviesToDom = () => {
 addMoviesToDom();
 
 /* Radio buttons filter by select */
+// let movieTitles = movies.filter((movie) => movie.Title);
 
-const movieTitles = movies.map((movie) => movie.Title);
-console.log(movieTitles);
 const filterMovies = (wordInMovieTitle) => {
-  let selectedMovies = movieTitles.find((movie) => movie.Title == wordInMovieTitle);
-  console.log(`wordInMovieTitle: ${wordInMovieTitle} | type: ${typeof wordInMovieTitle}`);
-  console.log(`selectedMovies: ${selectedMovies} | type: ${typeof selectedMovies}`);
-  console.log(`movieTitles: ${movieTitles} | type: ${typeof movieTitles}`);
+  const movieTitles = [];
+  movies.forEach((movie) => {
+    return movieTitles.push(movie.Title);
+  });
+
+  movieTitles.filter((movieTitle) => {
+    console.log(movieTitle.includes(wordInMovieTitle));
+  });
 };
+
+console.log(movies);
 
 const handleOnChangeEvent = document.body.addEventListener('change', (event) => {
   let target = event.target;
@@ -49,7 +54,6 @@ const handleOnChangeEvent = document.body.addEventListener('change', (event) => 
       filterMovies('Batman');
       break;
   }
-  // console.log(filterMovies);
   // console.log(message);
   // return message;
 });
