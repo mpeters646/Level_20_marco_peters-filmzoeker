@@ -25,7 +25,6 @@ const filteredMovies = (wordInMovieTitle) =>
 /* Radio buttons change */
 const handleOnChangeEvent = document.body.addEventListener('change', (event) => {
   let target = event.target;
-  let message;
   switch (target.value) {
     case 'alle-films':
       movieList.innerHTML = '';

@@ -104,6 +104,40 @@ main {
   height: 100vh;
 }
 
+.search-container {
+  height: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-container input {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 12px 10px 18px #666;
+}
+.search-container input[type=text] {
+  color: #333;
+  background-color: #e8f0fe;
+  width: 400px;
+  font-size: 1rem;
+}
+.search-container input[type=text]:focus {
+  background-color: #eee;
+}
+.search-container input[type=submit] {
+  padding: 10px;
+  color: #333;
+  background-color: #e8f0fe;
+  transition: all 500ms ease-in-out;
+}
+.search-container input[type=submit]:hover {
+  color: #fff;
+  background-color: #4f8bc9;
+  transform: scale(1.2);
+}
+
 .movie-container ul {
   display: flex;
   flex-wrap: wrap;
