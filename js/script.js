@@ -52,3 +52,16 @@ const handleOnChangeEvent = document.body.addEventListener('change', (event) => 
       break;
   }
 });
+
+/* Search Field */
+const myFunction = () => {
+  // Declare variables
+  let input, filter, ul, li;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById('movieList');
+  li = ul.getElementsByTagName('li');
+
+  movieList.innerHTML = '';
+  addMoviesToDom(filteredMovies(filter));
+};
