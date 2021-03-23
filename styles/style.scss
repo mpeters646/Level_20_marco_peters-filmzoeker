@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #eeeeee;
   color: #000;
 }
@@ -82,7 +82,7 @@ nav {
       margin: 20px 20px;
     }
 
-    input[type='radio']:after {
+    input[type="radio"]:after {
       width: 15px;
       height: 15px;
       border-radius: 15px;
@@ -90,13 +90,13 @@ nav {
       left: -1px;
       position: relative;
       background-color: #fff;
-      content: '';
+      content: "";
       display: inline-block;
       visibility: visible;
       border: 2px solid #fff;
     }
 
-    input[type='radio']:checked:after {
+    input[type="radio"]:checked:after {
       width: 15px;
       height: 15px;
       border-radius: 15px;
@@ -105,7 +105,7 @@ nav {
       position: relative;
       background-color: #4f8bc9;
       // background-color: #d4e7fa;
-      content: '';
+      content: "";
       display: inline-block;
       visibility: visible;
       border: 2px solid #d4e7fa;
@@ -130,8 +130,10 @@ main {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 12px 10px 18px #666;
+    outline-color: #4f8bc9;
+    -moz-outline-radius: 10px;
 
-    &[type='text'] {
+    &[type="text"] {
       color: #333;
       background-color: #e8f0fe;
       width: 400px;
@@ -139,10 +141,12 @@ main {
 
       &:focus {
         background-color: #eee;
+        border: 2px solid #d4e7fa;
+        border-radius: 10px;
       }
     }
 
-    &[type='submit'] {
+    &[type="submit"] {
       padding: 10px;
       color: #333;
       background-color: #e8f0fe;
@@ -173,9 +177,11 @@ main {
     box-shadow: 12px 10px 18px #666;
     transition: all 500ms ease-in-out;
 
+    &:focus-within,
     &:hover {
       transform: scale(1.07);
       box-shadow: 15px 15px 15px #666;
+      outline: none;
     }
   }
 }
@@ -196,7 +202,7 @@ footer {
   a {
     color: #fff;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
   }
 
